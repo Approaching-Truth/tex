@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+%\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{braket}
+\setlength{\parindent}{0em}
+\usepackage{changepage} % for the adjustwidth environment
+\usepackage{minted}
+\usepackage{parskip}
+\usepackage{lastpage}
+\usepackage{tcolorbox}
+\usepackage[
+  top=1cm,
+  bottom=3cm,
+  left=2cm,
+  right=2cm,
+  headheight=17pt, % as per the warning by fancyhdr
+  includehead,includefoot,
+  heightrounded, % to avoid spurious underfull messages
+]{geometry} 
+\usepackage[toc,page]{appendix}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\usepackage{xcolor}
+\definecolor{light-gray}{gray}{0.95}
+\newcommand{\code}[1]{\colorbox{light-gray}{\footnotesize\texttt{#1}}}
+\usemintedstyle{vs}
+\setminted{bgcolor=light-gray,fontsize=\footnotesize}
+\setmintedinline{bgcolor=light-gray,fontsize=\footnotesize}
+
+\usepackage{tcolorbox}
+\newtcolorbox{mybox}
+{colback=blue!15!white,colframe=blue!15!white}
+
+%{colback=cyan!5!white,colframe=none!75!black}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{commentsColor}{rgb}{0.497495, 0.497587, 0.497464}
+\definecolor{keywordsColor}{rgb}{0.000000, 0.000000, 0.635294}
+\definecolor{stringColor}{rgb}{0.558215, 0.000000, 0.135316}
+\lstset{
+  basicstyle=\ttfamily\small,                   % the size of the fonts that are used for the code
+  breakatwhitespace=false,                      % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                              % sets automatic line breaking
+  frame=tb,                                     % adds a frame around the code
+  commentstyle=\color{commentsColor}\textit,    % comment style
+  keywordstyle=\color{keywordsColor}\bfseries,  % keyword style
+  stringstyle=\color{stringColor},              % string literal style
+  numbers=left,                                 % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                                % how far the line-numbers are from the code
+  numberstyle=\tiny\color{commentsColor},       % the style that is used for the line-numbers
+  showstringspaces=false,                       % underline spaces within strings only
+  tabsize=2,                                    % sets default tabsize to 2 spaces
+  language=Sql
+}
+
+\setlength{\parindent}{0pt} %prevents indents after \nextline
+\setlength{\headheight}{52.18066pt}
+
+\pagestyle{fancy}
+\fancyhf{ } %header middle
+\chead{\today}
+\rhead{Firas \\ Hand-in 2}%header right
+\lhead{\includegraphics[scale=0.2]{img/AUlogo}}%header left
+
+
+\begin{document}
+
+\section*{}
+\end{document}
