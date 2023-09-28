@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{minted}
+\usepackage[shortlabels]{enumitem}
+
+% pakker for at lave bokse
+\usepackage{blindtext}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+
+\makeatletter
+\newcommand\xleftrightarrow[2][]{%
+  \ext@arrow 9999{\longleftrightarrowfill@}{#1}{#2}}
+\newcommand\longleftrightarrowfill@{%
+  \arrowfill@\leftarrow\relbar\rightarrow}
+\makeatother
+
+\begin{document}
+    \input{Titlepage.tex}
+    \tableofcontents
+    \section{Introduction}
+        
+    \section{Methods and materials}
+        \LaTeX{} \cite{molina:1982}
+    \section{Experiments, results, and discussion}
+
+    \section{Conclusion and perspectives}
+
+\newpage
+    \bibliographystyle{plain} % We choose the "plain" reference style
+    \bibliography{P1} % Entries are in the refs.bib file
+\end{document}
