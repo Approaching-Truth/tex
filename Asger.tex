@@ -1,8 +1,6 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 
-
-
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathrsfs}
@@ -14,6 +12,14 @@
 \usepackage{tcolorbox}
 \usepackage{graphicx}
 
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue, %Colour for external hyperlinks
+  linkcolor    = black, %Colour of internal links
+  citecolor   = lightgray %Colour of citations
+}
+
 \makeatletter
 \newcommand\xleftrightarrow[2][]{%
   \ext@arrow 9999{\longleftrightarrowfill@}{#1}{#2}}
@@ -22,17 +28,23 @@
 \makeatother
 
 \begin{document}
-    \input{Titlepage.tex}
-    \tableofcontents
-    \section{Introduction}
+\input{Titlepage.tex}
+\tableofcontents
+\section{Introduction}
+    \subsection{Leader election algorithms}
         
-    \section{Methods and materials}
-        \LaTeX{} \cite{molina:1982}
-    \section{Experiments, results, and discussion}
+        \subsubsection{The Bully algorithm}
+            In the domain of leader election algorithms, one widely recognized solution is the Bully Algorithm, originally proposed by Garcia-Molina in \cite{molina:1982}. The fundamental concept underlying this algorithm revolves around a set of \(N\) processes denoted as \(\{P_{0},...,P_{N-1}\}\), each possessing a unique identifier (UID), where \(id(P_{k}) =k\). When a process discerns the absence of responses from the current leader, it triggers an election procedure. The process \(P_{k}\) initiates an election in the subsequent manner:
+            
 
-    \section{Conclusion and perspectives}
+            
+\section{Methods and materials}
+    
+\section{Experiments, results, and discussion}
+
+\section{Conclusion and perspectives}
 
 \newpage
-    \bibliographystyle{plain} % We choose the "plain" reference style
+    \bibliographystyle{IEEEtran} % We choose the "plain" reference style
     \bibliography{P1} % Entries are in the refs.bib file
 \end{document}
